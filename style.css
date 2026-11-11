@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #172554, #2563eb, #60a5fa);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: white;
+}
+
+.weather-app {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #dbeafe;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-section input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-section button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #fbbf24;
+    color: #172554;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background: #f59e0b;
+}
+
+.current-weather,
+.hourly-forecast,
+.weekly-forecast {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.current-weather {
+    text-align: center;
+}
+
+.current-weather h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+#date {
+    color: #dbeafe;
+}
+
+.temperature {
+    margin: 25px 0;
+}
+
+.temperature h1 {
+    font-size: 65px;
+}
+
+.temperature p {
+    font-size: 18px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.weather-details div {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px 35px;
+    border-radius: 12px;
+}
+
+.weather-details h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.weather-details p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hourly-forecast h2,
+.weekly-forecast h2 {
+    margin-bottom: 20px;
+}
+
+#hourlyContainer,
+#weeklyContainer {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    .temperature h1 {
+        font-size: 50px;
+    }
+
+    .weather-details {
+        gap: 10px;
+    }
+
+    .weather-details div {
+        padding: 15px;
+        flex: 1;
+    }
+
+    .search-section button {
+        padding: 12px;
+    }
+}
+
+.hourly-card {
+    min-width: 110px;
+    padding: 20px 15px;
+    background: #f0f7fc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hourly-card p {
+    color: #71869b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.hourly-card h3 {
+    color: #398bc5;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.weekly-card {
+    min-width: 120px;
+    padding: 20px 15px;
+    background: #f0f7fc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.weekly-card p {
+    color: #71869b;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.weekly-card h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.weekly-card h3 {
+    color: #398bc5;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.search-section button:disabled {
+    background: #a8c9df;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
